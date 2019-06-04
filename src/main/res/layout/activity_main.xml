@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#00bcd4">
+
+        <!--自定义控件-->
+        <ImageButton
+            android:id="@+id/toggle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.54"
+            android:background="#00bcd4"
+            android:src="@drawable/ic_menu_black_18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:text="ZZUHelper"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.teacher.zzuhelper.View.SlidingMenu
+        android:id="@+id/sliding_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <include layout="@layout/left_menu" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="vertical">
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    card_view:cardBackgroundColor="#00bcd4"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/cardviewback">
+
+                        <TextView
+                            android:id="@+id/hello_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/point_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginRight="32dp"
+                            android:textColor="#757575"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/sentence_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="16dp"
+                            android:textColor="#757575"
+                            android:text="奈何长久坚强未使柔弱变珍贵，偶尔任性便有罪。"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="#00000000"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/score_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="成绩查询"
+                            custom:picture="@drawable/score_icon" />
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/table_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="课表查询"
+                            custom:picture="@drawable/table_icon" />
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/balance_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="饭卡余额"
+                            custom:picture="@drawable/balance_icon" />
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/cost_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="消费记录"
+                            custom:picture="@drawable/cost_icon" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/book_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="图书查询"
+                            custom:picture="@drawable/book_icon" />
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/seat_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="座位预约"
+                            custom:picture="@drawable/seat_icon" />
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/announcement_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="教务公告"
+                            custom:picture="@drawable/announcement_icon" />
+
+                        <com.teacher.zzuhelper.View.MyImageButton xmlns:custom="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/news_button"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="#00000000"
+                            android:text="教务新闻"
+                            custom:picture="@drawable/news_icon" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    card_view:cardCornerRadius="8dp"
+                    card_view:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#b2ebf2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="最新公告"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/notice_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="没有网，获取不到，嗨呀，好气啊"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.teacher.zzuhelper.View.SlidingMenu>
+</RelativeLayout>

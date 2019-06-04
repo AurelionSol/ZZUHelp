@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:text="课程"
+        android:textSize="14sp"
+        android:textColor="#9e9e9e"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColor="#757575"
+        android:id="@+id/edit_sName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="学时"
+        android:textSize="14sp"
+        android:layout_margin="4dp"
+        android:textColor="#9e9e9e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColor="#757575"
+        android:id="@+id/edit_sCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="教室"
+        android:textSize="14sp"
+        android:layout_margin="4dp"
+        android:textColor="#9e9e9e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColor="#757575"
+        android:id="@+id/edit_sClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="老师"
+        android:textColor="#9e9e9e"
+        android:textSize="14sp"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:textColor="#757575"
+        android:id="@+id/edit_sTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
